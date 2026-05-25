@@ -1,0 +1,43 @@
+{
+  "name": "Tonmoy Das",
+  "title": "PhD Student · Medical Bioinformatics & Systems Medicine",
+  "institution": "Universitätsklinikum Freiburg",
+  "institutionUrl": "",
+  "bio": "",
+  "skills": {
+    "languages": ["R"],
+    "tools": [],
+    "domains": []
+  },
+  "projects": [
+    {
+      "name": "Technical",
+      "description": "",
+      "tags": ["R"],
+      "url": "https://github.com/dtonmoy/Technical",
+      "year": "2025"
+    },
+    {
+      "name": "GBM Project",
+      "description": "",
+      "tags": ["R"],
+      "url": "https://github.com/dtonmoy/GBM-project",
+      "year": "2023"
+    }
+  ],
+  "experience": [
+    {
+      "role": "PhD Student",
+      "org": "Institute of Medical Bioinformatics and Systems Medicine, Universitätsklinikum Freiburg",
+      "period": "",
+      "description": ""
+    }
+  ],
+  "contact": {
+    "github": "dtonmoy",
+    "email": "dtonmoy0@gmail.com",
+    "scholar": "",
+    "linkedin": "",
+    "orcid": ""
+  }
+}
