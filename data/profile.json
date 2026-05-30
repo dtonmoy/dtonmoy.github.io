@@ -1,36 +1,74 @@
 {
   "name": "Tonmoy Das",
   "title": "PhD Student · Medical Bioinformatics & Systems Medicine",
-  "institution": "Universitätsklinikum Freiburg",
-  "institutionUrl": "",
-  "bio": "",
+  "institution": "Institute of Medical Bioinformatics and Systems Medicine, Universitätsklinikum Freiburg",
+  "institutionUrl": "https://www.uniklinik-freiburg.de/imbi.html",
+  "bio": "I work at the intersection of medical bioinformatics, spatial transcriptomics, and reproducible R-based analysis workflows. My current focus is turning complex biomedical datasets into interpretable results for cancer biology, with a particular interest in glioblastoma heterogeneity, tumor microenvironments, and transparent research tooling.",
   "skills": {
-    "languages": ["R"],
-    "tools": [],
-    "domains": []
+    "languages": [
+      "R",
+      "Bash",
+      "Markdown"
+    ],
+    "tools": [
+      "Bioconductor",
+      "ComplexHeatmap",
+      "fgsea",
+      "Conda",
+      "Git",
+      "Linux"
+    ],
+    "domains": [
+      "Medical bioinformatics",
+      "Systems medicine",
+      "Spatial transcriptomics",
+      "Cancer genomics",
+      "Pathway analysis",
+      "Data visualization"
+    ]
   },
   "projects": [
     {
-      "name": "Technical",
-      "description": "",
-      "tags": ["R"],
-      "url": "https://github.com/dtonmoy/Technical",
-      "year": "2025"
+      "name": "GBM Spatial Transcriptomics Analysis",
+      "description": "Archived analysis code for a glioblastoma spatial-transcriptomics project studying 5ALA-positive infiltrative tumor cells, regional subtype plasticity, wound-response signaling, stemness, recurrence, and survival associations.",
+      "tags": [
+        "R",
+        "Spatial transcriptomics",
+        "Glioblastoma",
+        "fgsea",
+        "Survival analysis"
+      ],
+      "url": "https://github.com/dtonmoy/GBM-project",
+      "year": "2023",
+      "status": "Archived research code"
     },
     {
-      "name": "GBM Project",
-      "description": "",
-      "tags": ["R"],
-      "url": "https://github.com/dtonmoy/GBM-project",
-      "year": "2023"
+      "name": "Technical Notes & Reproducible Workflows",
+      "description": "A living notebook of practical fixes and reusable snippets for R, Python, Conda, Linux, Bash, and Git workflows used while building reproducible computational biology analyses.",
+      "tags": [
+        "R",
+        "Shell",
+        "Conda",
+        "Linux",
+        "Git"
+      ],
+      "url": "https://github.com/dtonmoy/Technical",
+      "year": "2025",
+      "status": "Active notes"
     }
   ],
   "experience": [
     {
       "role": "PhD Student",
       "org": "Institute of Medical Bioinformatics and Systems Medicine, Universitätsklinikum Freiburg",
-      "period": "",
-      "description": ""
+      "period": "Current",
+      "description": "Researching medical bioinformatics and systems medicine questions with an emphasis on computational analysis, reproducible data workflows, and interpretation of high-dimensional biomedical datasets."
+    },
+    {
+      "role": "Research Project Contributor",
+      "org": "Glioblastoma spatial-transcriptomics analysis",
+      "period": "2023",
+      "description": "Built R analysis scripts for heatmaps, pathway enrichment, exon-intron split analysis, stemness scoring, correlation analysis, and survival-focused visualizations for a GBM spatial-transcriptomics study."
     }
   ],
   "contact": {
@@ -39,5 +77,11 @@
     "scholar": "",
     "linkedin": "",
     "orcid": ""
-  }
+  },
+  "photo": "https://github.com/dtonmoy.png",
+  "highlights": [
+    "Spatial transcriptomics",
+    "Glioblastoma biology",
+    "Reproducible R workflows"
+  ]
 }

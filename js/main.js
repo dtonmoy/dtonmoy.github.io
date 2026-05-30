@@ -57,7 +57,26 @@ function renderHero(p) {
             ? el('a', { href: p.institutionUrl, target: '_blank', rel: 'noopener' }, p.institution)
             : document.createTextNode(p.institution)
         ),
-        p.bio ? el('p', { class: 'hero-bio' }, p.bio) : null
+        p.bio ? el('p', { class: 'hero-bio' }, p.bio) : null,
+        p.highlights?.length
+          ? el('div', { class: 'hero-highlights' },
+              ...p.highlights.map(h => el('span', { class: 'tag hero-tag' }, h))
+            )
+          : null,
+        el('div', { class: 'hero-actions' },
+          p.contact?.github
+            ? el('a', { class: 'button button-primary', href: `https://github.com/${p.contact.github}`, target: '_blank', rel: 'noopener' },
+                el('span', { html: ICONS.github }),
+                'GitHub'
+              )
+            : null,
+          p.contact?.email
+            ? el('a', { class: 'button button-secondary', href: `mailto:${p.contact.email}` },
+                el('span', { html: ICONS.email }),
+                'Email me'
+              )
+            : null
+        )
       )
     )
   );
@@ -100,6 +119,13 @@ function renderProjects(projects) {
   const grid = sec.querySelector('.projects-grid');
   grid.innerHTML = '';
 
+  if (!projects?.length) {
+    sec.style.display = 'none';
+    const navLink = document.querySelector('.nav-links a[href="#projects"]');
+    if (navLink) navLink.parentElement.style.display = 'none';
+    return;
+  }
+
   for (const p of projects) {
     const tags = (p.tags || []).map(t => el('span', { class: 'tag' }, t));
     const card = el('div', { class: 'project-card' },
@@ -107,12 +133,13 @@ function renderProjects(projects) {
         el('h3', {}, p.name),
         p.year ? el('span', { class: 'project-year' }, p.year) : null
       ),
+      p.status ? el('div', { class: 'project-status' }, p.status) : null,
       p.description ? el('p', {}, p.description) : null,
       el('div', { class: 'project-footer' },
         p.url
           ? el('a', { class: 'project-link', href: p.url, target: '_blank', rel: 'noopener' },
               el('span', { html: ICONS.link }),
-              'View on GitHub'
+              'View project'
             )
           : el('span', {}),
         el('div', { class: 'skill-tags' }, ...tags)
@@ -126,6 +153,13 @@ function renderExperience(experience) {
   const sec = document.getElementById('experience');
   const timeline = sec.querySelector('.timeline');
   timeline.innerHTML = '';
+
+  if (!experience?.length) {
+    sec.style.display = 'none';
+    const navLink = document.querySelector('.nav-links a[href="#experience"]');
+    if (navLink) navLink.parentElement.style.display = 'none';
+    return;
+  }
 
   for (const e of experience) {
     timeline.appendChild(
@@ -151,6 +185,13 @@ function renderContact(contact) {
     contact.linkedin && { href: contact.linkedin,                         icon: 'linkedin', label: 'LinkedIn' },
     contact.orcid    && { href: contact.orcid,                            icon: 'orcid',    label: 'ORCID' },
   ].filter(Boolean);
+
+  if (!items.length) {
+    sec.style.display = 'none';
+    const navLink = document.querySelector('.nav-links a[href="#contact"]');
+    if (navLink) navLink.parentElement.style.display = 'none';
+    return;
+  }
 
   for (const item of items) {
     links.appendChild(
